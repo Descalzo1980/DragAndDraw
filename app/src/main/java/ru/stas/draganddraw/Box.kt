@@ -1,9 +1,14 @@
 package ru.stas.draganddraw
 
 import android.graphics.PointF
+import android.os.Parcelable
+import kotlinx.parcelize.IgnoredOnParcel
+import kotlinx.parcelize.Parcelize
 
-data class Box(val start: PointF){
+@Parcelize
+data class Box(val start: PointF) : Parcelable {
 
+    @IgnoredOnParcel
     var end: PointF = start
 
     val left: Float
